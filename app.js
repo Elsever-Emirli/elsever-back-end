@@ -71,7 +71,7 @@ app.post('/addpost',(req,res)=>{
 
 app.get('/post',(req,res)=>{
     db.query('SELECT * FROM addpost',(err,result)=>{
-        if(err){res.send(err)}
+        if(err){res.send(`Error  ${err}`)}
         if(result){res.send(result)}
     })
 })
